@@ -36,13 +36,13 @@ const data = [
   },
   {
     file: 'F_2',
-    img: 'https://drive.google.com/file/d/12kOcK3mpKeddEApm1yRcnKhnLWoSb7df/view?usp=sharing',
-    session: 'Express_1',
+    img: 'https://drive.google.com/file/d/17L0-a2OOCOJyKoF0ysycVWi1mD4r3Vsk/view?usp=sharing',
+    session: 'exemple_1',
   },
   {
     file: 'F_2',
-    img: 'https://drive.google.com/file/d/17L0-a2OOCOJyKoF0ysycVWi1mD4r3Vsk/view?usp=sharing',
-    session: 'exemple_1',
+    img: 'https://drive.google.com/file/d/12kOcK3mpKeddEApm1yRcnKhnLWoSb7df/view?usp=sharing',
+    session: 'Express_1',
   },
   {
     file: 'F_2',
@@ -53,5 +53,10 @@ const data = [
     file: 'F_2',
     img: 'https://drive.google.com/file/d/1ZBM1C_kW5qn5cQT4JqKUN-_TWwqabpr8/view?usp=sharing',
     session: 'Phr_Verb_1',
+  },
+  {
+    file: 'F_2',
+    img: 'https://drive.google.com/file/d/1aPBZXWlw8IrIs77WInzgf5YsshZ86enM/view?usp=sharing',
+    session: 'Pronun_1',
   },
 ]
