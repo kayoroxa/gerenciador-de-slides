@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador De Slides</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: grey;
+      font-size: 15px;
+    }
+    .card {
+      position: relative;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      text-align: center;
+      font-family: arial;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 150px;
+      width: 200px;
+      /* gap: 10px; */
+      overflow: hidden;
+      border-radius: 15px;
+    }
+    .card img {
+      flex: 1;
+      min-width: 100%;
+      min-height: 80%;
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+    }
+    .card .title {
+      font-size: 18px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card p {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: rgba(128, 128, 128, 0.459);
+      color: white;
+      margin-right: 5px;
+      padding: 0 10px;
+      border-radius: 10px;
+    }
+
+    .container {
+      width: 100vw;
+      /* height: 100vh; */
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 10px;
+      /* justify-content: start; */
+      /* align-items: center; */
+    }
+  </style>
+  <body>
+    <div class="container"></div>
+  </body>
+  <script src="./data.js"></script>
+  <script>
+    data.map(v => {
+      const card = document.createElement('div')
+      card.classList.add('card')
+      let link = v.img
+      if (link.includes('drive')) {
+        link = link.replace(
+          'https://drive.google.com/file/d/',
+          'https://drive.google.com/uc?export=view&id='
+        )
+        link = link.replace('/view?usp=sharing', '')
+      }
+      card.innerHTML = `
+        <img src="${link}" alt="">
+        <div class="title">${v.session}</div>
+        <p>${v.file}</p>
+      `
+      document.querySelector('.container').appendChild(card)
+    })
+  </script>
+</html>
