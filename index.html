@@ -48,9 +48,9 @@
 
     .card p {
       position: absolute;
-      top: 0;
-      right: 0;
-      background: rgba(128, 128, 128, 0.459);
+      bottom: 32px;
+      left: 0;
+      background: rgba(0, 110, 212, 0.726);
       color: white;
       margin-right: 5px;
       padding: 0 10px;
@@ -78,6 +78,7 @@
       const card = document.createElement('div')
       card.classList.add('card')
       let link = v.img
+      if (link.length === 0) return
       if (link.includes('drive')) {
         link = link.replace(
           'https://drive.google.com/file/d/',
